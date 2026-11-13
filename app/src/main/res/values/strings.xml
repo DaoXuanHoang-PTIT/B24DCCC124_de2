@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Quản Lý Thư Viện</string>
+    <string name="nav_books">Quản lý Sách</string>
+    <string name="nav_borrow">Mượn Sách</string>
+    <string name="nav_tickets">Phiếu Mượn</string>
+</resources>

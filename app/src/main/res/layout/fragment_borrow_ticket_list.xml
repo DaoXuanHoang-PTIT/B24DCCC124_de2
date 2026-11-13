@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="16dp"
+        android:text="Phiếu Mượn Đang Còn Hiệu Lực"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Trạng thái Rỗng -->
+    <TextView
+        android:id="@+id/tvEmptyTickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Không có phiếu mượn nào đang hoạt động."
+        android:textColor="#777777"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <!-- Danh sách Phiếu mượn -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBorrowTickets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp" />
+
+</LinearLayout>
