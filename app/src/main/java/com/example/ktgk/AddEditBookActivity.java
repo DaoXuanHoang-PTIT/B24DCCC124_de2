@@ -7,6 +7,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ktgk.database.DatabaseHelper;
 import com.example.ktgk.model.Book;
@@ -29,6 +32,13 @@ public class AddEditBookActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_book);
+
+        // Xử lý System Bar Insets để căn vừa đẹp khung màn hình thiết bị
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainAddEdit), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(0, systemBars.top, 0, systemBars.bottom);
+            return insets;
+        });
 
         dbHelper = new DatabaseHelper(this);
 
